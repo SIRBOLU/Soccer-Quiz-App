@@ -84,7 +84,7 @@ function App() {
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full">
           <h1 className="text-white font-bold text-center px-4 lg:text-6xl md:text-4xl sm:text-xl">
-            Welcome to Soccer Quiz App
+            Welcome to Soccer Quiz Game
           </h1>
           <h2 className="text-white italic text-center px-4 pt-2 lg:text-3xl md:text-2xl sm:text-md">
             Test Your Knowledge About This Game of Soccer
