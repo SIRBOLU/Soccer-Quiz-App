@@ -5,6 +5,7 @@ import { useState } from "react";
 function App() {
   const [increase, setIncrease] = useState(0);
   const [displayLogIn, setDisplayLogIn] = useState(false);
+  const [showSignUp, setShowSignUp] = useState(false);
 
   const handleIncrease = () => {
     setIncrease(increase + 1);
@@ -86,7 +87,7 @@ function App() {
 
       <section className="relative h-[85vh] w-full">
         {/* Background Image */}
-        <div className="absolute inset-0 bg-[url('./assets/footbal_legends.jpg')] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute inset-0 bg-[url('./assets/footbal_legends.jpg')]     bg-cover bg-center bg-no-repeat"></div>
 
         {/* Overlay for fade effect */}
         <div className="absolute inset-0 bg-black bg-opacity-80"></div>
@@ -103,7 +104,10 @@ function App() {
           {/* SIGN IN */}
           <h3 className="text-white pt-6 pb-3">
             Don't have an account?
-            <button className="bg-white text-green-900 font-semibold px-2 py-1 ml-2 rounded-lg hover:bg-green-900 hover:text-white hover:border-2 border-white">
+            <button
+              onClick={() => setShowSignUp(true)}
+              className="bg-white text-green-900 font-semibold px-2 py-1 ml-2 rounded-lg hover:bg-green-900 hover:text-white hover:border-2 border-white"
+            >
               Sign Up
             </button>
           </h3>
@@ -111,94 +115,106 @@ function App() {
           {/* LOG IN */}
           <h3 className="text-white">
             Already have an account?
-            <button className="bg-white text-green-900 font-semibold px-2 py-1 ml-2 rounded-lg hover:bg-green-900 hover:text-white hover:border-2 border-white">
+            <button
+              onClick={() => setDisplayLogIn(true)}
+              className="bg-white text-green-900 font-semibold px-2 py-1 ml-2 rounded-lg hover:bg-green-900 hover:text-white hover:border-2 border-white"
+            >
               Log In
             </button>
           </h3>
+
+          {/* SIGN UP FORM */}
+          {showSignUp && (
+            <div className="bg-green-400 w-[400px] m-auto mt-4">
+              <h1 className="text-center text-3xl pt-4 pb-2 font-bold">
+                Sign Up
+              </h1>
+              <div className="w-16 h-1 bg-white m-auto mb-4 rounded-lg"></div>
+              <form
+                className="flex flex-col items-left w-[200px] pl-10 pb-6"
+                action=""
+              >
+                <label className="" htmlFor="">
+                  First Name
+                </label>
+                <input
+                  className="w-[250px] rounded-md p-1 pl-4 mt-2 mb-4"
+                  type="text"
+                  placeholder="First Name"
+                />
+                <label htmlFor="">Last Name</label>
+                <input
+                  className="w-[250px] rounded-md p-1 pl-4 mt-2 mb-4"
+                  type="text"
+                  placeholder="Last Name"
+                />
+                <label htmlFor="">Username</label>
+                <input
+                  className="w-[250px] rounded-md p-1 pl-4 mt-2 mb-4"
+                  type="text"
+                  placeholder="Username"
+                />
+                <label htmlFor="">Email</label>
+                <input
+                  className="w-[250px] rounded-md p-1 pl-4 mt-2 mb-4"
+                  type="email"
+                  placeholder="Email"
+                />
+                <label htmlFor="">Preferred Password</label>
+                <input
+                  className="w-[250px] rounded-md p-1 pl-4 mt-2 mb-4"
+                  type="password"
+                  placeholder="Preferred Password"
+                />
+              </form>
+              <div className="w-[400px] flex justify-center">
+                <button
+                  className="bg-green-900 text-white p-2 rounded-lg hover:text-green-800 hover:bg-white mb-6 font-semibold pl-4 pr-4"
+                  type="submit"
+                >
+                  Sign Up
+                </button>
+              </div>
+            </div>
+          )}
+
+          {/* LOG IN FORM */}
+          {displayLogIn && (
+            <div className="bg-green-400 w-[400px] m-auto mt-4">
+              <h1 className="text-center text-3xl pt-4 pb-2 font-bold">
+                Log In
+              </h1>
+              <div className="w-16 h-1 bg-white m-auto mb-4 rounded-lg"></div>
+              <form
+                className="flex flex-col items-left w-[200px] pl-10 pb-6"
+                action=""
+              >
+                <label htmlFor="">Username</label>
+                <input
+                  className="w-[250px] rounded-md p-1 pl-4 mt-2 mb-4"
+                  type="text"
+                  placeholder="Username"
+                />
+                <label htmlFor="">Password</label>
+                <input
+                  className="w-[250px] rounded-md p-1 pl-4 mt-2 mb-4"
+                  type="password"
+                  placeholder="Password"
+                />
+              </form>
+
+              <div className="w-[400px] flex justify-center">
+                <button
+                  className="bg-green-900 text-white p-2 pl-4 pr-4 rounded-lg hover:text-green-800 hover:bg-white mb-6 font-semibold"
+                  type="submit"
+                >
+                  Log In
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </section>
-      {/* SIGN UP FORM */}
-      <div className="bg-green-400 w-[400px] m-auto mt-4">
-        <h1 className="text-center text-3xl pt-4 pb-2 font-bold">Sign Up</h1>
-        <div className="w-16 h-1 bg-white m-auto mb-4 rounded-lg"></div>
-        <form
-          className="flex flex-col items-left w-[200px] pl-10 pb-6"
-          action=""
-        >
-          <label className="" htmlFor="">
-            First Name
-          </label>
-          <input
-            className="w-[250px] rounded-md p-1 pl-4 mt-2 mb-4"
-            type="text"
-            placeholder="First Name"
-          />
-          <label htmlFor="">Last Name</label>
-          <input
-            className="w-[250px] rounded-md p-1 pl-4 mt-2 mb-4"
-            type="text"
-            placeholder="Last Name"
-          />
-          <label htmlFor="">Username</label>
-          <input
-            className="w-[250px] rounded-md p-1 pl-4 mt-2 mb-4"
-            type="text"
-            placeholder="Username"
-          />
-          <label htmlFor="">Email</label>
-          <input
-            className="w-[250px] rounded-md p-1 pl-4 mt-2 mb-4"
-            type="email"
-            placeholder="Email"
-          />
-          <label htmlFor="">Preferred Password</label>
-          <input
-            className="w-[250px] rounded-md p-1 pl-4 mt-2 mb-4"
-            type="password"
-            placeholder="Preferred Password"
-          />
-        </form>
-        <div className="w-[400px] flex justify-center">
-          <button
-            className="bg-green-900 text-white p-2 rounded-lg hover:text-green-800 hover:bg-white mb-6 font-semibold pl-4 pr-4"
-            type="submit"
-          >
-            Sign Up
-          </button>
-        </div>
-      </div>
-
-      {/* LOG IN FORM */}
-
-      <div className="bg-green-400 w-[400px] m-auto mt-4">
-        <h1 className="text-center text-3xl pt-4 pb-2 font-bold">Log In</h1>
-        <div className="w-16 h-1 bg-white m-auto mb-4 rounded-lg"></div>
-        <form
-          className="flex flex-col items-left w-[200px] pl-10 pb-6"
-          action=""
-        >
-          <label htmlFor="">Username</label>
-          <input
-            className="w-[250px] rounded-md p-1 pl-4 mt-2 mb-4"
-            type="text"
-            placeholder="Username"
-          />
-          <label htmlFor="">Password</label>
-          <input
-            className="w-[250px] rounded-md p-1 pl-4 mt-2 mb-4"
-            type="password"
-            placeholder="Password"
-          />
-        </form>
-        <div className="w-[400px] flex justify-center">
-          <button
-            className="bg-green-900 text-white p-2 pl-4 pr-4 rounded-lg hover:text-green-800 hover:bg-white mb-6 font-semibold"
-            type="submit"
-          >
-            Log In
-          </button>
-        </div>
-      </div>
 
       {/* UseState */}
       <button onClick={handleIncrease}>Increase</button>
