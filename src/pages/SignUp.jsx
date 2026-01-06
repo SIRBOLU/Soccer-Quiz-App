@@ -100,7 +100,7 @@ const SignUp = () => {
         {/* 50% opacity overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-        {/* Content */}
+        {/* SIGN UP FORM */}
         <div className="relative z-10 flex justify-center items-center">
           <div className="w-[420px] bg-gray-300 opacity-80 p-10 rounded-2xl m-10">
             <h1 className="text-center text-3xl font-semibold">

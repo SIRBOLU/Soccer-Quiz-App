@@ -94,15 +94,15 @@ const LogIn = () => {
         </header>
 
         {/* LOG IN FORM */}
-        <section className="relative h-screen w-full">
+        <section className="relative flex-1 w-full">
           {/* Background Image */}
           <div className="absolute inset-0 bg-[url('./assets/CR7_Messi_playing_chess.jpg')] bg-cover bg-center bg-no-repeat"></div>
 
           {/* 50% opacity overlay */}
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-          {/* Content */}
-          <div className="min-h-screen relative z-10 flex justify-center items-center">
+          {/* LOG IN FORM */}
+          <div className="relative z-10 flex justify-center items-center">
             <div className="w-[420px] bg-gray-300 opacity-80 p-10 rounded-2xl">
               <h1 className="text-center text-3xl font-semibold">
                 Glad to have you back!
