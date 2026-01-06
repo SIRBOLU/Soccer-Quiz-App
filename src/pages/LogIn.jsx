@@ -111,7 +111,7 @@ const LogIn = () => {
               />
             </div>
 
-            <button className="bg-black text-white px-6 py-3 rounded-full mt-4">
+            <button className="bg-black text-white px-6 py-3 rounded-full mt-4 w-fit m-auto hover:text-black hover:bg-white hover:border-black hover:border-2">
               Log In
             </button>
           </form>
