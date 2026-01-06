@@ -52,7 +52,7 @@ const LogIn = () => {
         <div className="absolute inset-0 bg-black/50" />
 
         {/* Login Form */}
-        <div className="relative z-10 w-[420px] max-w-[90%] bg-gray-300 p-8 rounded-2xl">
+        <div className="relative z-10 w-[420px] max-w-[90%] bg-gray-300 p-8 rounded-2xl opacity-80">
           <h1 className="text-center text-3xl font-semibold">
             Glad to have you back!
           </h1>
