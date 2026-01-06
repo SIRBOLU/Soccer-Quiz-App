@@ -19,22 +19,25 @@ const Home = () => {
 
           <ul className="hidden md:flex gap-6 text-base">
             <li>
-              <a href="#" className="text-white hover:text-gray-300">
+              <a href="#" className="text-white hover:text-gray-300 font-thin">
                 How it works
               </a>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-gray-300">
+              <a href="#" className="text-white hover:text-gray-300 font-thin">
                 Weird Facts in Football
               </a>
             </li>
             <li>
-              <Link to="/about" className="text-white hover:text-gray-300">
+              <Link
+                to="/about"
+                className="text-white hover:text-gray-300 font-thin"
+              >
                 About Us
               </Link>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-gray-300">
+              <a href="#" className="text-white hover:text-gray-300 font-thin">
                 Contact Us
               </a>
             </li>
@@ -94,7 +97,7 @@ const Home = () => {
         </div>
       </header>
 
-      <section className="relative h-[85vh] w-full">
+      <section className="relative h-screen w-full">
         <div className="absolute inset-0 bg-[url('./assets/footbal_legends.jpg')] bg-cover bg-center bg-no-repeat"></div>
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
@@ -110,7 +113,7 @@ const Home = () => {
             Don't have an account?
             <button
               onClick={() => navigate("/signup")}
-              className="bg-white text-green-900 font-semibold px-2 py-1 ml-2 rounded-lg hover:bg-green-900 hover:text-white hover:border-2 border-white"
+              className="bg-white text-black font-semibold px-2 py-1 ml-2 rounded-lg hover:bg-gray-500 hover:text-white hover:border-2 border-white"
             >
               Sign Up
             </button>
@@ -120,7 +123,7 @@ const Home = () => {
             Already have an account?
             <button
               onClick={() => navigate("/login")}
-              className="bg-white text-green-900 font-semibold px-2 py-1 ml-2 rounded-lg hover:bg-green-900 hover:text-white hover:border-2 border-white"
+              className="bg-white text-black font-semibold px-2 py-1 ml-2 rounded-lg hover:bg-gray-500 hover:text-white hover:border-2 border-white"
             >
               Log In
             </button>

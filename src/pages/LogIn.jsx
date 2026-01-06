@@ -109,7 +109,9 @@ const LogIn = () => {
               </h1>
               <form className="flex flex-col items-center w-full mt-8">
                 <div className="flex flex-col w-full mb-4">
-                  <label className="text-left mb-1">Email Address</label>
+                  <label className="text-left mb-1 text-sm">
+                    Email Address
+                  </label>
                   <input
                     type="email"
                     placeholder="Enter your email address"
@@ -119,7 +121,7 @@ const LogIn = () => {
 
                 <div className="flex flex-col w-full mb-4">
                   <div className="flex justify-between">
-                    <label className="text-left mb-1">Password</label>
+                    <label className="text-left mb-1 text-sm">Password</label>
                     <label className="text-left mb-1 font-light text-sm">
                       Forgot Password?
                     </label>
@@ -127,7 +129,7 @@ const LogIn = () => {
                   <input
                     type="password"
                     placeholder="Enter your password"
-                    className="w-full rounded-full rounded-full p-4 mt-2 mb-4"
+                    className="w-full rounded-full p-4 mt-2 mb-4"
                   />
                 </div>
 

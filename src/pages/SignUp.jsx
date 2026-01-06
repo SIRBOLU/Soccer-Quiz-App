@@ -92,35 +92,69 @@ const SignUp = () => {
         </div>
       </header>
 
-      <div className="bg-green-400 w-[300px] m-auto mt-10">
-        <h1 className="text-center text-3xl pt-4 pb-2 font-bold">Sign Up</h1>
-        <div className="w-16 h-1 bg-white m-auto mb-4 rounded-lg"></div>
+      {/* SIGN IN FORM */}
+      <section className="relative flex-1 w-full">
+        {/* Background Image */}
+        <div className="absolute inset-0 bg-[url('./assets/football_players.jpg')] bg-cover bg-center bg-no-repeat"></div>
 
-        <form className="flex flex-col w-[200px] pl-10 pb-6">
-          <label>First Name</label>
-          <input className="input" type="text" />
+        {/* 50% opacity overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-          <label>Last Name</label>
-          <input className="input" type="text" />
+        {/* Content */}
+        <div className="relative z-10 flex justify-center items-center">
+          <div className="w-[420px] bg-gray-300 opacity-80 p-10 rounded-2xl m-10">
+            <h1 className="text-center text-3xl font-semibold">
+              Sign up to participate!
+            </h1>
+            <form className="flex flex-col items-center w-full mt-8">
+              <div className="flex flex-col w-full mb-4">
+                <label className="text-left mb-1 text-sm">Username</label>
+                <input
+                  type="text"
+                  placeholder="Enter your preferred username"
+                  className="w-full rounded-full p-4 mt-2 mb-4"
+                />
+                <label className="text-left mb-1 text-sm">Email Address</label>
+                <input
+                  type="email"
+                  placeholder="Enter your email address"
+                  className="w-full rounded-full p-4 mt-2 mb-4"
+                />
+                <label className="text-left mb-1 text-sm">Nationality</label>
+                <input
+                  type="text"
+                  placeholder="Enter your nationality"
+                  className="w-full rounded-full p-4 mt-2 mb-4"
+                />
+                <label className="text-left mb-1 text-sm">
+                  Favorite Football Club
+                </label>
+                <input
+                  type="text"
+                  placeholder="Enter your favorite football club"
+                  className="w-full rounded-full p-4 mt-2 mb-4"
+                />
+              </div>
 
-          <label>Username</label>
-          <input className="input" type="text" />
+              <div className="flex flex-col w-full mb-4">
+                <label className="text-left mb-1 text-sm">Password</label>
+                <input
+                  type="password"
+                  placeholder="Enter your preferred password"
+                  className="w-full rounded-full p-4 mt-2 mb-4"
+                />
+              </div>
 
-          <label>Email</label>
-          <input className="input" type="email" />
-
-          <label>Password</label>
-          <input className="input" type="password" />
-        </form>
-
-        <div className="flex justify-center pb-6">
-          <button className="bg-green-900 text-white px-4 py-2 rounded-lg">
-            Sign Up
-          </button>
+              <button className="bg-black text-white px-6 py-3 rounded-full mt-4 hover:text-black hover:bg-white hover:border-black hover:border-2">
+                Sign Up
+              </button>
+            </form>
+          </div>
         </div>
-      </div>
-      <footer className="text-center text-white bg-gradient-to-br from-[#0F0F0F] via-[#1A1A1A] to-[#2A2A2A] p-3 h-full text-xs font-thin">
-        techlyCoded &copy; 2026
+      </section>
+
+      <footer className="mt-auto text-center bg-gradient-to-br from-[#0F0F0F] via-[#1A1A1A] to-[#2A2A2A] text-white p-4 text-xs font-thin">
+        techlyCoded © 2026
       </footer>
     </>
   );
