@@ -36,11 +36,43 @@ const LogIn = () => {
             menuOpen ? "max-h-64 opacity-100 mt-4" : "max-h-0 opacity-0"
           }`}
         >
-          <ul className="flex flex-col items-center gap-4 py-4 bg-gray-700 rounded-lg text-white">
-            <li onClick={() => setMenuOpen(false)}>How it works</li>
-            <li onClick={() => setMenuOpen(false)}>Weird Facts in Football</li>
-            <li onClick={() => setMenuOpen(false)}>About Us</li>
-            <li onClick={() => setMenuOpen(false)}>Contact Us</li>
+          <ul className="flex flex-col items-center gap-4 py-4 bg-gray-700 rounded-lg">
+            <li>
+              <a
+                href="#"
+                className="text-white text-lg hover:text-gray-400"
+                onClick={() => setMenuOpen(false)}
+              >
+                How it works?
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="text-white text-lg hover:text-gray-400"
+                onClick={() => setMenuOpen(false)}
+              >
+                Weird Facts in Football
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="text-white text-lg hover:text-gray-400"
+                onClick={() => setMenuOpen(false)}
+              >
+                About Us
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="text-white text-lg hover:text-gray-400"
+                onClick={() => setMenuOpen(false)}
+              >
+                Contact Us
+              </a>
+            </li>
           </ul>
         </div>
       </header>

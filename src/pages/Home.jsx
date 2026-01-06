@@ -19,27 +19,39 @@ const Home = () => {
 
           <ul className="hidden md:flex gap-6 text-base">
             <li>
-              <a href="#" className="text-white hover:text-gray-300 font-thin">
+              <Link
+                to="/how"
+                className="text-white hover:text-gray-300 font-thin"
+              >
                 How it works
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-gray-300 font-thin">
+              <Link
+                to="/facts"
+                onClick={() => setMenuOpen(false)}
+                className="text-white hover:text-gray-300 font-thin"
+              >
                 Weird Facts in Football
-              </a>
+              </Link>
             </li>
             <li>
               <Link
                 to="/about"
+                onClick={() => setMenuOpen(false)}
                 className="text-white hover:text-gray-300 font-thin"
               >
                 About Us
               </Link>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-gray-300 font-thin">
+              <Link
+                to="/contact"
+                onClick={() => setMenuOpen(false)}
+                className="text-white hover:text-gray-300 font-thin"
+              >
                 Contact Us
-              </a>
+              </Link>
             </li>
           </ul>
 
