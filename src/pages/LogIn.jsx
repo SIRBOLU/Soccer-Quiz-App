@@ -102,7 +102,7 @@ const LogIn = () => {
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
           {/* LOG IN FORM */}
-          <div className="relative z-10 flex justify-center items-center">
+          <div className="h-screen relative z-10 flex justify-center items-center">
             <div className="w-[420px] bg-gray-300 opacity-80 p-10 rounded-2xl">
               <h1 className="text-center text-3xl font-semibold">
                 Glad to have you back!

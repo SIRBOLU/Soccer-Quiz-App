@@ -131,7 +131,7 @@ const SignUp = () => {
                 </label>
                 <input
                   type="text"
-                  placeholder="Enter your favorite football club"
+                  placeholder="Enter your favorite club"
                   className="w-full rounded-full p-4 mt-2 mb-4"
                 />
               </div>
